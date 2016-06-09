@@ -1,0 +1,33 @@
+.s-typeahead-wrapper {
+
+}
+
+.s-typeahead-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #D6D2D2;
+}
+
+.s-typeahead-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.s-typeahead-list-item {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  padding: 20px;
+}
+
+.s-typeahead-list-item:last-child {
+  border: none;
+}
+
+.s-typeahead-list-item--selected, .s-typeahead-list-item:hover {
+  background: cornflowerblue;
+}
