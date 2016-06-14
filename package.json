@@ -9,8 +9,14 @@
     "test:watch": "jest --watch=all"
   },
   "keywords": [
-    "react"
+    "react", "react-typeahead", "react-simple-typeahead",
+    "typeahead", "autocomplete", "react-autocomplete"
   ],
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/Nagogus/react-simple-typeahead.git"
+  },
   "author": "Ruben Nagoga",
   "license": "ISC",
   "devDependencies": {
