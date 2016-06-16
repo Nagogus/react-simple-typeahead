@@ -3,8 +3,10 @@
 
   ReactDOM.render(<SimpleTypeahead
       options={options}
-      onOptionSelected={function() {}}
+      onOptionSelected={function(option) { console.log("Option selected:", option) }}
+      onInputEmpty={function() { console.log("Typeahead input is empty!"); }}
       maxOptionsCount={4}
+
       placeholder="Type country name"
       customClasses={{
         input: 's-typeahead-input',

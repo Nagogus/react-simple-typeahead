@@ -52,25 +52,25 @@ export default class SimpleTypeahead extends React.Component {
   }
 
   processResults(value) {
-    let results = [];
-    if (value.trim() !== '' && value !== this.props.defaultValue) {
-      results = this.props.options.filter((option) => {
-        return option.toLowerCase().indexOf(value.toLowerCase()) > -1;
-      });
-    }
+    let results = this.props.options.filter((option) => {
+      return option.toLowerCase().indexOf(value.toLowerCase()) > -1;
+    });
     if (this.props.maxOptionsCount > 0) {
       results = results.slice(0, this.props.maxOptionsCount);
     }
     this.setState({results: results, selectedIndex: 0});
     this.show();
+
   }
 
   selectOption() {
     let selectedIndex = this.state.selectedIndex;
     let selectedOption = this.state.results[selectedIndex];
-    this.input.value = selectedOption;
-    this.hide();
-    this.props.onOptionSelected(selectedOption);
+    if(selectedOption) {
+      this.input.value = selectedOption;
+      this.hide();
+      this.props.onOptionSelected(selectedOption);
+    }
   }
 
   setSelectedIndex(index, callback) {
@@ -115,7 +115,11 @@ export default class SimpleTypeahead extends React.Component {
 
   onChange() {
     let value = this.input.value;
-    this.processResults(value);
+    if (value.trim() !== '') {
+      this.processResults(value);
+    } else {
+      this.props.onInputEmpty();
+    }
   }
 
   onOptionSelected(index) {
@@ -156,6 +160,7 @@ SimpleTypeahead.propTypes = {
   placeholder: React.PropTypes.string,
   options: React.PropTypes.array.isRequired,
   onOptionSelected: React.PropTypes.func,
+  onInputEmpty: React.PropTypes.func,
   maxOptionsCount: React.PropTypes.number,
   customClasses: React.PropTypes.object
 };
