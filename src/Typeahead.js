@@ -118,6 +118,7 @@ export default class SimpleTypeahead extends React.Component {
     if (value.trim() !== '') {
       this.processResults(value);
     } else {
+      this.hide();
       this.props.onInputEmpty();
     }
   }
