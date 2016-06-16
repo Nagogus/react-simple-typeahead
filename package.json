@@ -1,6 +1,6 @@
 {
   "name": "react-simple-typeahead",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple typeahead component for react",
   "main": "./lib/react-simple-typeahead.js",
   "scripts": {
@@ -9,13 +9,16 @@
     "test:watch": "jest --watch=all"
   },
   "keywords": [
-    "react", "react-typeahead", "react-simple-typeahead",
-    "typeahead", "autocomplete", "react-autocomplete"
+    "react",
+    "react-typeahead",
+    "react-simple-typeahead",
+    "typeahead",
+    "autocomplete",
+    "react-autocomplete"
   ],
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/Nagogus/react-simple-typeahead.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nagogus/react-simple-typeahead.git"
   },
   "author": "Ruben Nagoga",
   "license": "ISC",
