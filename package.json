@@ -1,6 +1,6 @@
 {
   "name": "react-simple-typeahead",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple typeahead component for react",
   "main": "./lib/react-simple-typeahead.js",
   "scripts": {
