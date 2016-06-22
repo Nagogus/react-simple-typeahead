@@ -78,6 +78,14 @@ describe('Typeahead', () => {
     });
   });
 
+  describe('when esc pressed', () => {
+    it('should hide results', () => {
+      getResultsFor(component, input, 'White');
+      TestUtils.Simulate.keyUp(input, {keyCode: 27});
+      expect(component.state.showResults).toBe(false);
+    });
+  });
+
   describe('when press', function () {
     const KEY_DOWN = 40;
     const KEY_UP = 38;

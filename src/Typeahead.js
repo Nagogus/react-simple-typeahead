@@ -4,6 +4,7 @@ import Options from './Options';
 const KEY_UP = 38;
 const KEY_DOWN = 40;
 const KEY_ENTER = 13;
+const KEY_ESC = 27;
 
 export default class SimpleTypeahead extends React.Component {
 
@@ -105,6 +106,9 @@ export default class SimpleTypeahead extends React.Component {
         break;
       case KEY_ENTER:
         this.selectOption();
+        break;
+      case KEY_ESC:
+        this.hide();
         break;
     }
   }
