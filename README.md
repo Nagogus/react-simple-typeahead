@@ -5,6 +5,8 @@ React simple typeahead is a react based typeahead(autocomplete) component.
 ### Demo
 - [Simple demo](http://nagogus.github.io/react-simple-typeahead/examples)
 
+<img src="http://nagogus.github.io/react-simple-typeahead/examples/example.gif" width="300" />
+
 ### Installation
 ```
 npm install react-simple-typeahead
