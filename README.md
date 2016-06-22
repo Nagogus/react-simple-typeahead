@@ -41,7 +41,7 @@ Type: `Function`
 Default: none  
 Callback function which will be called on each option selection by user, function will receive as parameter an `option`
 
-**onInputEmpty
+**onInputEmpty**
 Type: `Function`  
 Default: none  
 Callback function which will be called once the input of component get empty
