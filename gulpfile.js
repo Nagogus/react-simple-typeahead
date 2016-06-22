@@ -6,6 +6,9 @@ let browserify = require('browserify');
 let babelify = require('babelify');
 let source = require('vinyl-source-stream');
 let connect = require('gulp-connect');
+let uglify = require('gulp-uglify');
+let rename = require('gulp-rename');
+let streamify = require('gulp-streamify');
 
 gulp.task('lib', () => {
   return gulp.src('./src/**')
@@ -17,15 +20,19 @@ gulp.task('lib', () => {
 });
 
 gulp.task('scripts', function () {
-  return browserify({
+  let config = browserify({
     entries: './src/react-simple-typeahead.js',
     extensions: ['.js', '.jsx'],
     standalone: 'SimpleTypeahead',
     debug: true
   })
-    .transform(babelify, {presets: ['es2015', 'react']})
-    .bundle()
+  .transform(babelify, {presets: ['es2015', 'react']});
+
+  return config.bundle()
     .pipe(source('react-simple-typeahead.js'))
+    .pipe(gulp.dest('dist'))
+    .pipe(streamify(uglify()))
+    .pipe(rename('react-simple-typeahead.min.js'))
     .pipe(gulp.dest('dist'));
 });
 
@@ -45,4 +52,6 @@ gulp.task('watch', function () {
   gulp.watch(['./src/*.jsx', './src/*.js'], ['scripts']);
   gulp.watch(['./examples/*.html'], ['html']);
 });
+
+gulp.task('build', ['scripts', 'lib']);
 

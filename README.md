@@ -2,7 +2,21 @@
 
 React simple typeahead is a react based typeahead(autocomplete) component.
 
+### Demo
+- [Simple demo](http://nagogus.github.io/react-simple-typeahead/examples)
+
+### Installation
+```
+npm install react-simple-typeahead
+```
+If you are using npm and CommonJS modules you simply require react-simple-typeahead:
+```
+var Typehead = require('react-simple-typeahead');
+```
+or you can load `react-simple-typeahead.js` file from `dist` folder.
+
 ### Usage
+
 ```
 <SimpleTypeahead
       options={['Red', 'Green', 'Yellow', 'Blue']}
@@ -19,7 +33,7 @@ React simple typeahead is a react based typeahead(autocomplete) component.
 ```
 
 ### API
-SimpleTypeahead component properties:  
+Component properties:  
 
 **defaultValue**  
 Type: `String`  
