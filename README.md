@@ -57,12 +57,12 @@ Type: `Function`
 Default: none  
 Callback function which will be called on each option selection by user, function will receive as parameter an `option`
 
-**onInputEmpty**
+**onInputEmpty**  
 Type: `Function`  
 Default: none  
 Callback function which will be called once the input of component get empty
 
-**maxOptionsCount**
+**maxOptionsCount**  
 Type: `Number`  
 Default: `-1`  
 Limit number of suggested options to show. By default there is no limit
