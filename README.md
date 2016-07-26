@@ -1,5 +1,7 @@
 # React simple typeahead
 
+[![Build Status](https://travis-ci.org/Nagogus/react-simple-typeahead.svg?branch=master)](https://travis-ci.org/Nagogus/react-simple-typeahead)
+
 React simple typeahead is a react based typeahead(autocomplete) component.
 
 ### Demo
